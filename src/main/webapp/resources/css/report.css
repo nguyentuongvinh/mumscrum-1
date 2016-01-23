@@ -1,0 +1,16 @@
+		 @media print {
+		 	.button{
+		 		display:none;
+		 	}
+		 }
+		
+		.Pru{
+        	font-family: 'Open Sans' Helvetica, sans-serif;
+        	letter-spacing:-0.5px;color:#EE1B2E;
+        	font-size:10px;text-transform: uppercase;
+        }
+        .product{
+        	font-family: Times New Roman, Helvetica, sans-serif;
+        	text-transform: lowercase; 
+        	font-size:15px;color:black;
+        }

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+  <definition name="common" template="/WEB-INF/view/layout/classic.jsp">   
+  	<put-attribute name="head" value="/WEB-INF/view/layout/head.jsp" /> 
+    <put-attribute name="header" value="/WEB-INF/view/layout/header.jsp" />    
+    <put-attribute name="sidebar" value="/WEB-INF/view/layout/sidebar.jsp" />
+    <put-attribute name="tab" value="" />
+  </definition>
+  
+  <definition name="login" template="/WEB-INF/view/login.jsp" >  	
+  </definition>
+  
+  <definition name="error" extends="common" >   
+  	<put-attribute name="title" value="Error" />
+  	<put-attribute name="body" value="/WEB-INF/view/error.jsp" />    
+  	<put-attribute name="current" value="error" />
+  </definition>
+  
+  <definition name="404" extends="common" >   
+  	<put-attribute name="title" value="404" />
+  	<put-attribute name="body" value="/WEB-INF/view/pagenotfound.jsp" />    
+  	<put-attribute name="current" value="pagenotfound" />
+  </definition>
+  
+  <definition name="403" extends="common" >   
+  	<put-attribute name="title" value="Access Denied" />
+  	<put-attribute name="body" value="/WEB-INF/view/403.jsp" />    
+  	<put-attribute name="current" value="Access Denied" />
+  </definition>
+  
+  <definition name="index" extends="common" >   
+  	<put-attribute name="title" value="HOME" />
+  	<put-attribute name="body" value="/WEB-INF/view/index.jsp" />    
+  	<put-attribute name="current" value="index" />
+  </definition>
+  
+  <definition name="usermgt" extends="common" >   
+  	<put-attribute name="title" value="Employee" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/usermgt.jsp" />
+  	<put-attribute name="current" value="user" />
+  	<put-attribute name="tab" value="administrator" />     
+  </definition>
+  
+  <definition name="newuser" extends="common" >   
+  	<put-attribute name="title" value="Employee" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/newuser.jsp" />
+  	<put-attribute name="current" value="user" />     
+  	<put-attribute name="tab" value="administrator" />
+  </definition>
+  
+  <definition name="edituser" extends="common" >   
+  	<put-attribute name="title" value="Employee" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/edituser.jsp" />
+  	<put-attribute name="current" value="user" />     
+  	<put-attribute name="tab" value="administrator" />
+  </definition>
+  
+  <definition name="rolemgt" extends="common" >   
+  	<put-attribute name="title" value="Role" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/rolemgt.jsp" />
+  	<put-attribute name="current" value="role" />     
+  	<put-attribute name="tab" value="administrator" />
+  </definition>
+  
+  <definition name="newrole" extends="common" >   
+  	<put-attribute name="title" value="Role" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/newrole.jsp" />
+  	<put-attribute name="current" value="role" />     
+  	<put-attribute name="tab" value="administrator" />
+  </definition>
+  
+  <definition name="editrole" extends="common" >   
+  	<put-attribute name="title" value="Role" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/editrole.jsp" />
+  	<put-attribute name="current" value="role" />     
+  	<put-attribute name="tab" value="administrator" />
+  </definition>
+  
+  <definition name="permissionmgt" extends="common" >   
+  	<put-attribute name="title" value="Permission" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/permissionmgt.jsp" />
+  	<put-attribute name="current" value="permission" />
+  	<put-attribute name="tab" value="administrator" />     
+  </definition>
+  
+  <definition name="newpermission" extends="common" >   
+  	<put-attribute name="title" value="Permission" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/newpermission.jsp" />
+  	<put-attribute name="current" value="permission" />
+  	<put-attribute name="tab" value="administrator" />     
+  </definition>
+  
+  <definition name="editpermission" extends="common" >   
+  	<put-attribute name="title" value="Permission" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/editpermission.jsp" />
+  	<put-attribute name="current" value="permission" />
+  	<put-attribute name="tab" value="administrator" />     
+  </definition>
+  
+  <definition name="logmgt" extends="common" >   
+  	<put-attribute name="title" value="Log" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/logmgt.jsp" />
+  	<put-attribute name="current" value="log" />
+  	<put-attribute name="tab" value="administrator" />     
+  </definition>
+  
+  <definition name="tablesetup" extends="common" >   
+  	<put-attribute name="title" value="Table Setup" />
+  	<put-attribute name="body" value="/WEB-INF/view/param/itemtable.jsp" />
+  	<put-attribute name="current" value="tablesetup" />
+  	<put-attribute name="tab" value="param" />     
+  </definition>
+  
+  <definition name="edititemtable" extends="common" >   
+  	<put-attribute name="title" value="Item Table" />
+  	<put-attribute name="body" value="/WEB-INF/view/param/edititemtable.jsp" />
+  	<put-attribute name="current" value="tablesetup" />
+  	<put-attribute name="tab" value="param" />     
+  </definition>
+  
+  <definition name="itemitem" extends="common" >   
+  	<put-attribute name="title" value="Item List" />
+  	<put-attribute name="body" value="/WEB-INF/view/param/itemitem.jsp" />
+  	<put-attribute name="current" value="tablesetup" />
+  	<put-attribute name="tab" value="param" />     
+  </definition>
+  
+  <definition name="edititemitem" extends="common" >   
+  	<put-attribute name="title" value="Item Item" />
+  	<put-attribute name="body" value="/WEB-INF/view/param/edititemitem.jsp" />
+  	<put-attribute name="current" value="tablesetup" />
+  	<put-attribute name="tab" value="param" />     
+  </definition>
+  
+  <definition name="changepwd" extends="common" >   
+  	<put-attribute name="title" value="Change Password" />
+  	<put-attribute name="body" value="/WEB-INF/view/admin/changepwd.jsp" />
+  	<put-attribute name="current" value="changepwd" />
+  	<put-attribute name="tab" value="user" />     
+  </definition>
+  
+  <definition name="logcount" extends="common" >   
+  	<put-attribute name="title" value="Log Count" />
+  	<put-attribute name="body" value="/WEB-INF/view/statistic/logcount.jsp" />
+  	<put-attribute name="current" value="logcount" />
+  	<put-attribute name="tab" value="statistic" />     
+  </definition>
+  <definition name="graphlogcount" extends="common" >   
+  	<put-attribute name="title" value="Log Count Graph" />
+  	<put-attribute name="body" value="/WEB-INF/view/statistic/graph_logcount.jsp" />
+  	<put-attribute name="current" value="graphlogcount" />
+  	<put-attribute name="tab" value="statistic" />     
+  </definition>
+  
+</tiles-definitions>
