@@ -1,0 +1,10 @@
+I¡¯ve run a problem several times when .gitignore doesn¡¯t appear to be working. The file I want to ignore is specified in .gitignore, but it always comes up as an unstaged change :( . I always end up searching the internet for the resolution, because I can never seem to remember it. Well today, I¡¯m making a blog post about it, so it will be easier for me to find and hopefully help others with the same problem!
+
+What I have discovered is that at some point in time, I mistakenly added the files that I now want to ignore to my repository. For me, this is typically a .dll in a .NET project that¡¯s recreated on every build anyway. Since git ¡®knows¡¯ about the file, it can¡¯t ignore it. So the resolution is simple, remove everything from git¡¯s index and add it back which can be done with the commands below¡­
+
+git rm -r --cached .
+git add .
+git commit -m "fixing .gitignore"
+
+To just target the files listed in the .gitignore, use the command below!
+for file in `cat .gitignore`  ; do git rm -r --cached $file; done
